@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+  <style>
+    td { padding: 20px; border: 1px dashed red; text-align: center; }
+    tr:nth-child(odd) { background: #e8f1b2}
+  </style>
+</head>
+<body ng-controller="PhoneListCtrl">
+
+  <p>Total number of phones: {{phones.length}}</p>
+
+  <ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+
+   <table>
+      <tr ng-repeat="i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+        <td ng-repeat="c in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+          {{i*c}}
+        </td>
+      </tr>
+
+    </table>
+
+
+</body>
+</html>
